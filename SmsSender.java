@@ -12,16 +12,16 @@ import org.apache.http.message.BasicNameValuePair;
 public class SmsSender {
     // Find your Account Sid and Auth Token at twilio.com/console
     public static final String ACCOUNT_SID = "AC1ba67ccf30ea2fe309901290ea6937e3";
-    public static final String AUTH_TOKEN = "your_auth_token";
+    public static final String AUTH_TOKEN = "e1d0f772142d3e7acd08fd2ead3af7f7";
 
     public static void main(String[] args) {
         TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
         // Build the parameters
         List<NameValuePair> params = new ArrayList<NameValuePair>();
-        params.add(new BasicNameValuePair("To", "+14159352345"));
-        params.add(new BasicNameValuePair("From", "+14158141829"));
-        params.add(new BasicNameValuePair("Body", "Where's Wallace?"));
+        params.add(new BasicNameValuePair("To", "+16312526048"));
+        params.add(new BasicNameValuePair("From", "+16312526048"));
+        params.add(new BasicNameValuePair("Body", "Hello from Damina Townes CS 643 Fall 2018"));
 
         MessageFactory messageFactory = client.getAccount().getMessageFactory();
         Message message = messageFactory.create(params);
